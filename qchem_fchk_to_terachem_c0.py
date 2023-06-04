@@ -10,7 +10,7 @@ BASIS_REORDER_QCHEM_TO_TC = [
     [0],
     [0,1,2],
     [3,4,5,0,1,2], # xx, yy, zz, xy, xz, yz -> xy, xz, yz, xx, yy, zz
-    [7,8,9,2,1,3,5,6,4,0], # xxx, yyy, zzz, xyy, xxy, xxz, xzz, yzz, xxz, xyz -> xyz, xxy, xyy, xxz, yyz, xzz, yzz, xxx, yyy, zzz
+    [7,8,9,2,1,3,5,6,4,0], # xxx, yyy, zzz, xyy, xxy, xxz, xzz, yzz, yyz, xyz -> xyz, xxy, xyy, xxz, yyz, xzz, yzz, xxx, yyy, zzz
                            # This order was obtained by pure try and error on a metal system.
 ]
 def shelltype_to_nao(L): return (L + 1) * (L + 2) // 2
