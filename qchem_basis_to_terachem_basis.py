@@ -14,7 +14,7 @@ basis_started = False
 for line in qchem_input_lines:
     if (basis_started):
         qchem_basis_lines.append(line)
-    if line.startswith("$basis"):
+    if (line.startswith("$basis") or line.startswith("$aux_basis")):
         basis_started = True
     if (line.startswith("$end") and basis_started):
         basis_started = False
